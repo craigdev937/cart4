@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_link {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+}
+
+
+
+
