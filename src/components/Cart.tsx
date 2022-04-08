@@ -1,10 +1,25 @@
 import React from "react";
+import { useAppSelector, useAppDispatch } from "../global/Hooks";
+import { remove } from "../global/CartSlice";
+import { IProd } from "../types/Interfaces";
 
 export const Cart = (): JSX.Element => {
+    const dispatch = useAppDispatch();
+    const cart = useAppSelector((state) => state.cart);
+    const handleRemove = (productId: IProd) => {
+        dispatch(remove(productId));
+    };
+
     return (
         <React.Fragment>
             <h1>Cart</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In explicabo sit, eligendi veniam nisi voluptatem officiis, assumenda maxime debitis atque ullam, dicta libero quidem fuga alias! Omnis culpa deleniti dignissimos?</p>
+            <main>
+                {/* {cart.map((item: IProd) => (
+                    <aside key={item.id} className="cart-card">
+
+                    </aside>
+                ))} */}
+            </main>
         </React.Fragment>
     );
 };

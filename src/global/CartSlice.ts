@@ -20,9 +20,9 @@ const CartSlice = createSlice({
         add: (state, action: PayloadAction<IProd>) => {
             state.cart.push(action.payload)
         },
-        remove: (state, action: PayloadAction<{}>) => {
+        remove: (state, action: PayloadAction<IProd>) => {
             state.cart.filter(
-                (item) => item.id !== action.payload)
+                (item) => item.id !== action.payload.id)
         },
     }
 });

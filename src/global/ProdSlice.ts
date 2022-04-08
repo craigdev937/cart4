@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, 
     PayloadAction } from "@reduxjs/toolkit";
-import { IProd, IProdState } from "../types/Interfaces";
+import { IProd, ICartState, IProdState } from "../types/Interfaces";
 
 const URL = "https://fakestoreapi.com/products";
 export const fetchProd = 
